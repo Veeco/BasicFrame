@@ -25,6 +25,8 @@ static User *kInstance;
 
 + (void)setSingletonUser:(__kindof User *)singletonUser {
     
+    [self singletonUser];
+    
     kInstance.ID = singletonUser.ID;
     kInstance.nickName = singletonUser.nickName;
     kInstance.icon = singletonUser.icon;

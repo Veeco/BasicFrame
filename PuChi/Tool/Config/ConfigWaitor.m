@@ -22,7 +22,7 @@
 @implementation ConfigWaitor
 
 // 单例
-Singleton(ConfigWaitor)
+SINGLETON(ConfigWaitor)
 
 + (ConfigWaitor *)singletonConfigWaitor {
     

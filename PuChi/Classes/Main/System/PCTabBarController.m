@@ -37,11 +37,11 @@
     
     // tabBar元素
     NSMutableDictionary *atts = [NSMutableDictionary dictionary];
-    atts[NSForegroundColorAttributeName] = ColorWithRGBA(220, 220, 220, 1);
-    atts[NSFontAttributeName] = BoldSize(15);
+    atts[NSForegroundColorAttributeName] = COLOR_WITH_RGBA(220, 220, 220, 1);
+    atts[NSFontAttributeName] = BOLD_SIZE(15);
     
     NSMutableDictionary *selectedAtts = [NSMutableDictionary dictionary];
-    selectedAtts[NSForegroundColorAttributeName] = Color_Main;
+    selectedAtts[NSForegroundColorAttributeName] = COLOR_MAIN;
     selectedAtts[NSFontAttributeName] = atts[NSFontAttributeName];
     
     UITabBarItem *item = [UITabBarItem appearance];
@@ -50,7 +50,7 @@
     
     // tabBar背景
     UITabBar *tabBar = [UITabBar appearance];
-    tabBar.backgroundColor = ColorWithRGBA(242, 242, 242, 1);
+    tabBar.backgroundColor = COLOR_WITH_RGBA(242, 242, 242, 1);
 }
 
 /**

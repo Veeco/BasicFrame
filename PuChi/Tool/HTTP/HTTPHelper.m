@@ -13,7 +13,7 @@
 @implementation HTTPHelper
 
 // 全局AF管理者
-static AFHTTPSessionManager *instanceManager;
+static AFHTTPSessionManager *kManager;
 
 /**
  获取全局AF管理者
@@ -25,10 +25,10 @@ static AFHTTPSessionManager *instanceManager;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         
-        instanceManager = [AFHTTPSessionManager manager];
-        instanceManager.requestSerializer.timeoutInterval = 30; // 超时
+        kManager = [AFHTTPSessionManager manager];
+        kManager.requestSerializer.timeoutInterval = 30; // 超时
     });
-    return instanceManager;
+    return kManager;
 }
 
 /**
@@ -80,7 +80,7 @@ static AFHTTPSessionManager *instanceManager;
  */
 + (void)timeoutHint {
     
-    [SVProgressHUD showErrorWithStatus:kTimeoutHint];
+    [SVProgressHUD showErrorWithStatus:TIMEOUT_HINT];
 }
 
 @end

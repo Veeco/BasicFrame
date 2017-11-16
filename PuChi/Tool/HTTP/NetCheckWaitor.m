@@ -24,7 +24,7 @@
 @implementation NetCheckWaitor
 
 // 单例
-Singleton(NetCheckWaitor)
+SINGLETON(NetCheckWaitor)
 
 /**
  开启网络检测
@@ -48,7 +48,7 @@ Singleton(NetCheckWaitor)
                     [self shared]->_connected = NO;
                     [self shared]->_wasWifi = NO;
                     
-                    [SVProgressHUD showErrorWithStatus:kNoHint];
+                    [SVProgressHUD showErrorWithStatus:NO_HINT];
                     
                     break;
                     
@@ -57,7 +57,7 @@ Singleton(NetCheckWaitor)
                     [self shared]->_connected = YES;
                     [self shared]->_wasWifi = NO;
                     
-                    [SVProgressHUD showInfoWithStatus:kWwanHint];
+                    [SVProgressHUD showInfoWithStatus:WWAN_HINT];
                     
                     break;
                     
@@ -67,7 +67,7 @@ Singleton(NetCheckWaitor)
                     
                     if (![self shared]->_wasWifi) {
                         
-                        [SVProgressHUD showInfoWithStatus:kWifiHint];
+                        [SVProgressHUD showInfoWithStatus:WIFI_HINT];
                         [self shared]->_wasWifi = YES;
                     }
                     break;

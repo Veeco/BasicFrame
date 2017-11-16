@@ -11,7 +11,7 @@
 @implementation User
 
 // 单例
-Singleton(User)
+SINGLETON(User)
 
 + (User *)singletonUser {
 

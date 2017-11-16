@@ -11,18 +11,23 @@
 @implementation User
 
 // 单例
-SINGLETON(User)
+static User *kInstance;
 
 + (User *)singletonUser {
-
-    return [self shared];
+    
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        
+        kInstance = [self new];
+    });
+    return kInstance;
 }
 
 + (void)setSingletonUser:(__kindof User *)singletonUser {
     
-    [self shared].ID = singletonUser.ID;
-    [self shared].nickName = singletonUser.nickName;
-    [self shared].icon = singletonUser.icon;
+    kInstance.ID = singletonUser.ID;
+    kInstance.nickName = singletonUser.nickName;
+    kInstance.icon = singletonUser.icon;
 }
 
 @end

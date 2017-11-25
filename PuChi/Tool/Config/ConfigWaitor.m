@@ -8,7 +8,8 @@
 
 #import "ConfigWaitor.h"
 
-#define kEnviTypeKey @"kEnviTypeKey" // 运行环境 key
+// 运行环境 key
+static NSString *const kEnviTypeKey = @"kEnviTypeKey";
 
 @interface ConfigWaitor ()
     
@@ -34,12 +35,6 @@ SINGLETON(ConfigWaitor)
     if (!self->_enviType) {
         
         self->_enviType = [[NSUserDefaults.standardUserDefaults objectForKey:kEnviTypeKey] integerValue];
-        
-        // 第一次运行时默认为发布环境
-        if (!self->_enviType) {
-            
-            self->_enviType = EnviTypeRelease;
-        }
     }
     return self->_enviType;
 }

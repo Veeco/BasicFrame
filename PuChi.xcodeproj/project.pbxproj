@@ -10,7 +10,6 @@
 		1D25A2CE1FBB3EEA00C80A80 /* Base+WGExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D25A2C01FBB3EEA00C80A80 /* Base+WGExtension.m */; };
 		1D25A2CF1FBB3EEA00C80A80 /* NSArray+WGExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D25A2C21FBB3EEA00C80A80 /* NSArray+WGExtension.m */; };
 		1D25A2D01FBB3EEA00C80A80 /* NSDictionary+WGExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D25A2C41FBB3EEA00C80A80 /* NSDictionary+WGExtension.m */; };
-		1D25A2D11FBB3EEA00C80A80 /* NSString+WGExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D25A2C61FBB3EEA00C80A80 /* NSString+WGExtension.m */; };
 		1D25A2D21FBB3EEA00C80A80 /* UIImage+WGExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D25A2C81FBB3EEA00C80A80 /* UIImage+WGExtension.m */; };
 		1D25A2D31FBB3EEA00C80A80 /* UILabel+WGExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D25A2CA1FBB3EEA00C80A80 /* UILabel+WGExtension.m */; };
 		1D25A2D41FBB3EEA00C80A80 /* UIView+WGExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D25A2CC1FBB3EEA00C80A80 /* UIView+WGExtension.m */; };
@@ -43,8 +42,6 @@
 		1D25A2C21FBB3EEA00C80A80 /* NSArray+WGExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+WGExtension.m"; sourceTree = "<group>"; };
 		1D25A2C31FBB3EEA00C80A80 /* NSDictionary+WGExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+WGExtension.h"; sourceTree = "<group>"; };
 		1D25A2C41FBB3EEA00C80A80 /* NSDictionary+WGExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+WGExtension.m"; sourceTree = "<group>"; };
-		1D25A2C51FBB3EEA00C80A80 /* NSString+WGExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+WGExtension.h"; sourceTree = "<group>"; };
-		1D25A2C61FBB3EEA00C80A80 /* NSString+WGExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+WGExtension.m"; sourceTree = "<group>"; };
 		1D25A2C71FBB3EEA00C80A80 /* UIImage+WGExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+WGExtension.h"; sourceTree = "<group>"; };
 		1D25A2C81FBB3EEA00C80A80 /* UIImage+WGExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+WGExtension.m"; sourceTree = "<group>"; };
 		1D25A2C91FBB3EEA00C80A80 /* UILabel+WGExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+WGExtension.h"; sourceTree = "<group>"; };
@@ -116,8 +113,6 @@
 				1D25A2C21FBB3EEA00C80A80 /* NSArray+WGExtension.m */,
 				1D25A2C31FBB3EEA00C80A80 /* NSDictionary+WGExtension.h */,
 				1D25A2C41FBB3EEA00C80A80 /* NSDictionary+WGExtension.m */,
-				1D25A2C51FBB3EEA00C80A80 /* NSString+WGExtension.h */,
-				1D25A2C61FBB3EEA00C80A80 /* NSString+WGExtension.m */,
 				1D25A2C71FBB3EEA00C80A80 /* UIImage+WGExtension.h */,
 				1D25A2C81FBB3EEA00C80A80 /* UIImage+WGExtension.m */,
 				1D25A2C91FBB3EEA00C80A80 /* UILabel+WGExtension.h */,
@@ -671,7 +666,6 @@
 			files = (
 				1DAB0D7C1FBA7B4400A87BED /* ContentVC.m in Sources */,
 				1D25A2DA1FBB3F9900C80A80 /* KeyChainStore.m in Sources */,
-				1D25A2D11FBB3EEA00C80A80 /* NSString+WGExtension.m in Sources */,
 				1DE2FCA91FBC3FB400763313 /* HTTPHelper.m in Sources */,
 				1DAB0D821FBA7B6B00A87BED /* DiscoveryVC.m in Sources */,
 				1D25A2D21FBB3EEA00C80A80 /* UIImage+WGExtension.m in Sources */,

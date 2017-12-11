@@ -32,11 +32,11 @@
 		1DE2FCA91FBC3FB400763313 /* HTTPHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DE2FCA81FBC3FB400763313 /* HTTPHelper.m */; };
 		1DE2FCC01FBC47F100763313 /* NetCheckWaitor.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DE2FCBF1FBC47F100763313 /* NetCheckWaitor.m */; };
 		4E8CAF1174D7409F842EF8E1 /* libPods-PuChi.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BDEB8CB8F3230A718C1130E6 /* libPods-PuChi.a */; };
+		64F949381FDE25DC00560458 /* KeyHeaderConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 64F949371FDE25DC00560458 /* KeyHeaderConst.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		1D25A1F91FBAE53D00C80A80 /* UtilHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UtilHeader.h; sourceTree = "<group>"; };
-		1D25A1FA1FBB1C0B00C80A80 /* NotiHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NotiHeader.h; sourceTree = "<group>"; };
 		1D25A2C01FBB3EEA00C80A80 /* Base+WGExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Base+WGExtension.m"; sourceTree = "<group>"; };
 		1D25A2C11FBB3EEA00C80A80 /* NSArray+WGExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+WGExtension.h"; sourceTree = "<group>"; };
 		1D25A2C21FBB3EEA00C80A80 /* NSArray+WGExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+WGExtension.m"; sourceTree = "<group>"; };
@@ -77,7 +77,6 @@
 		1DAB0D831FBA7B7400A87BED /* MineVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MineVC.h; sourceTree = "<group>"; };
 		1DAB0D841FBA7B7400A87BED /* MineVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MineVC.m; sourceTree = "<group>"; };
 		1DAB0D891FBA842100A87BED /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
-		1DAB0D8A1FBA853100A87BED /* KeyHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KeyHeader.h; sourceTree = "<group>"; };
 		1DAB0D8C1FBA857100A87BED /* ColorHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ColorHeader.h; sourceTree = "<group>"; };
 		1DE2FC9E1FBBC8D300763313 /* ConfigWaitor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ConfigWaitor.h; sourceTree = "<group>"; };
 		1DE2FC9F1FBBC8D300763313 /* ConfigWaitor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ConfigWaitor.m; sourceTree = "<group>"; };
@@ -88,6 +87,8 @@
 		1DE2FCBE1FBC47F100763313 /* NetCheckWaitor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NetCheckWaitor.h; sourceTree = "<group>"; };
 		1DE2FCBF1FBC47F100763313 /* NetCheckWaitor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NetCheckWaitor.m; sourceTree = "<group>"; };
 		1DE2FCC11FBC52FF00763313 /* NetHintMacro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NetHintMacro.h; sourceTree = "<group>"; };
+		64F949361FDE25DC00560458 /* KeyHeaderConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeyHeaderConst.h; sourceTree = "<group>"; };
+		64F949371FDE25DC00560458 /* KeyHeaderConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeyHeaderConst.m; sourceTree = "<group>"; };
 		A6CDD1ECEDF54BD02152B835 /* Pods-PuChi.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PuChi.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PuChi/Pods-PuChi.debug.xcconfig"; sourceTree = "<group>"; };
 		BDEB8CB8F3230A718C1130E6 /* libPods-PuChi.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PuChi.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9381A2AEDBC270126289323 /* Pods-PuChi.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PuChi.release.xcconfig"; path = "Pods/Target Support Files/Pods-PuChi/Pods-PuChi.release.xcconfig"; sourceTree = "<group>"; };
@@ -200,7 +201,7 @@
 				1DAB0D261FBA700200A87BED /* Classes */,
 				1DAB0D861FBA82E700A87BED /* Tool */,
 				1DAB0D871FBA82F700A87BED /* Category */,
-				1DAB0D881FBA831000A87BED /* Macro */,
+				1DAB0D881FBA831000A87BED /* Header */,
 				1DAB0D0F1FBA639800A87BED /* AppDelegate.h */,
 				1DAB0D101FBA639800A87BED /* AppDelegate.m */,
 				1DAB0D251FBA6F5700A87BED /* Supporting Files */,
@@ -476,16 +477,16 @@
 			path = Category;
 			sourceTree = "<group>";
 		};
-		1DAB0D881FBA831000A87BED /* Macro */ = {
+		1DAB0D881FBA831000A87BED /* Header */ = {
 			isa = PBXGroup;
 			children = (
 				1DAB0D891FBA842100A87BED /* PrefixHeader.pch */,
-				1DAB0D8A1FBA853100A87BED /* KeyHeader.h */,
 				1DAB0D8C1FBA857100A87BED /* ColorHeader.h */,
 				1D25A1F91FBAE53D00C80A80 /* UtilHeader.h */,
-				1D25A1FA1FBB1C0B00C80A80 /* NotiHeader.h */,
+				64F949361FDE25DC00560458 /* KeyHeaderConst.h */,
+				64F949371FDE25DC00560458 /* KeyHeaderConst.m */,
 			);
-			path = Macro;
+			path = Header;
 			sourceTree = "<group>";
 		};
 		1DE2FC9D1FBBC65500763313 /* Config */ = {
@@ -676,6 +677,7 @@
 				1DAB0D2B1FBA74F300A87BED /* PCTabBarController.m in Sources */,
 				1D25A2D31FBB3EEA00C80A80 /* UILabel+WGExtension.m in Sources */,
 				1D25A2CF1FBB3EEA00C80A80 /* NSArray+WGExtension.m in Sources */,
+				64F949381FDE25DC00560458 /* KeyHeaderConst.m in Sources */,
 				1DAB0D2E1FBA77DC00A87BED /* PCNavigationController.m in Sources */,
 				1DAB0D791FBA7B2600A87BED /* HomeVC.m in Sources */,
 				1DE2FCC01FBC47F100763313 /* NetCheckWaitor.m in Sources */,

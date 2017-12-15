@@ -20,6 +20,6 @@
 /** 昵称 */
 @property (nullable, nonatomic, copy) NSString *nickName;
 /** 头像 */
-@property (nullable, nonatomic, copy) NSString *icon;
+@property (nullable, nonatomic, copy) NSURL *icon;
 
 @end

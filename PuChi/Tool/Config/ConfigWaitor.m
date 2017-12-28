@@ -11,15 +11,6 @@
 // 运行环境 key
 static NSString *const kEnviTypeKey = @"kEnviTypeKey";
 
-@interface ConfigWaitor ()
-    
-{
-    // 运行环境
-    EnviType _enviType;
-}
-
-@end
-
 @implementation ConfigWaitor
 
 // 单例
@@ -32,16 +23,11 @@ SINGLETON(ConfigWaitor)
 
 - (EnviType)enviType {
     
-    if (!_enviType) {
-        
-        _enviType = [[NSUserDefaults.standardUserDefaults objectForKey:kEnviTypeKey] integerValue];
-    }
-    return _enviType;
+    return [[NSUserDefaults.standardUserDefaults objectForKey:kEnviTypeKey] integerValue];
 }
 
 - (void)setEnviType:(EnviType)enviType {
     
-    _enviType = enviType;
     [NSUserDefaults.standardUserDefaults setObject:@(enviType) forKey:kEnviTypeKey];
 }
 

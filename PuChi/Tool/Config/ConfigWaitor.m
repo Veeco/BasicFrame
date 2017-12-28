@@ -32,16 +32,16 @@ SINGLETON(ConfigWaitor)
 
 - (EnviType)enviType {
     
-    if (!self->_enviType) {
+    if (!_enviType) {
         
-        self->_enviType = [[NSUserDefaults.standardUserDefaults objectForKey:kEnviTypeKey] integerValue];
+        _enviType = [[NSUserDefaults.standardUserDefaults objectForKey:kEnviTypeKey] integerValue];
     }
-    return self->_enviType;
+    return _enviType;
 }
 
 - (void)setEnviType:(EnviType)enviType {
     
-    self->_enviType = enviType;
+    _enviType = enviType;
     [NSUserDefaults.standardUserDefaults setObject:@(enviType) forKey:kEnviTypeKey];
 }
 

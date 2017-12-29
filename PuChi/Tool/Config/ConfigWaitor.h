@@ -26,9 +26,9 @@ typedef NS_ENUM(NSUInteger, LoginStatus) {
 /** 单例 */
 @property (class, nonnull, nonatomic, readonly) __kindof ConfigWaitor *singletonConfigWaitor;
 
-/** 运行环境 默认为发布状态 */
+/** 运行环境 */
 @property (assign, nonatomic) EnviType enviType;
-/** 登录状态 默认为未登录状态 */
+/** 登录状态 */
 @property (assign, nonatomic) LoginStatus loginStatus;
 
 @end

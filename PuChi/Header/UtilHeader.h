@@ -56,7 +56,7 @@
 
 // 单例
 #define SINGLETON(CLASS) \
-static __kindof CLASS * kInstance; \
+static CLASS *kInstance; \
 \
 + (__kindof CLASS *)shared { \
 \

@@ -7,6 +7,22 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <AFNetworking.h>
+@class NetCheckWaitor;
+
+@protocol NetCheckWaitorDelegate <NSObject>
+
+@optional
+
+/**
+ 网络状态变更回调
+
+ @param status 网络状态
+ @param waitor 自身
+ */
+- (void)netDidChangeToStatus:(AFNetworkReachabilityStatus)status withWaitor:(nonnull __kindof NetCheckWaitor *)waitor;
+
+@end
 
 @interface NetCheckWaitor : NSObject
 
@@ -16,10 +32,24 @@
 + (void)startNetCheck;
 
 /**
- 判断联网状态
+ 获取联网状态
 
- @return 是否联网
+ @return 联网状态
  */
-+ (BOOL)isConnected;
++ (AFNetworkReachabilityStatus)getConnectStatus;
+
+/**
+ 添加代理
+ 
+ @param delegate 代理
+ */
++ (void)addDelegate:(nonnull NSObject<NetCheckWaitorDelegate> *)delegate;
+
+/**
+ 移除代理
+ 
+ @param delegate 代理
+ */
++ (void)removeDelegate:(nonnull NSObject<NetCheckWaitorDelegate> *)delegate;
 
 @end

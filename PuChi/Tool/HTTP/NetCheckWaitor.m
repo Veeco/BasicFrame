@@ -7,21 +7,33 @@
 //
 
 #import "NetCheckWaitor.h"
-#import <AFNetworking.h>
 #import "NetHintMacro.h"
 
 @interface NetCheckWaitor ()
 
 {
-    // 是否联网
-    BOOL _connected;
-    // 上一次是否为Wifi网络
-    BOOL _wasWifi;
+    // 联网状态
+    AFNetworkReachabilityStatus _connectStatus;
 }
+
+/** 代理 */
+@property (nullable, nonatomic, strong) NSHashTable<NSObject<NetCheckWaitorDelegate> *> *delegates;
 
 @end
 
 @implementation NetCheckWaitor
+
+#pragma mark - <Lazy>
+
+- (NSHashTable *)delegates {
+    if (!_delegates) {
+        
+        self.delegates = [NSHashTable weakObjectsHashTable];
+    }
+    return _delegates;
+}
+
+#pragma mark - <Normal>
 
 // 单例
 SINGLETON(NetCheckWaitor)
@@ -35,7 +47,7 @@ SINGLETON(NetCheckWaitor)
     dispatch_once(&onceToken, ^{
         
         // 初始化, 以防 Wifi 进入造成多余提示
-        [self shared]->_wasWifi = YES;
+        [self shared]->_connectStatus = AFNetworkReachabilityStatusReachableViaWiFi;
         
         AFNetworkReachabilityManager *manager = [AFNetworkReachabilityManager sharedManager];
         
@@ -45,17 +57,11 @@ SINGLETON(NetCheckWaitor)
                     
                 case AFNetworkReachabilityStatusNotReachable: // 无网络
                     
-                    [self shared]->_connected = NO;
-                    [self shared]->_wasWifi = NO;
-                    
                     [SVProgressHUD showErrorWithStatus:NO_HINT];
                     
                     break;
                     
                 case AFNetworkReachabilityStatusReachableViaWWAN: // 手机网络
-                    
-                    [self shared]->_connected = YES;
-                    [self shared]->_wasWifi = NO;
                     
                     [SVProgressHUD showInfoWithStatus:WWAN_HINT];
                     
@@ -63,17 +69,23 @@ SINGLETON(NetCheckWaitor)
                     
                 case AFNetworkReachabilityStatusReachableViaWiFi: // Wifi
                     
-                    [self shared]->_connected = YES;
-                    
-                    if (![self shared]->_wasWifi) {
+                    if ([self shared]->_connectStatus != AFNetworkReachabilityStatusReachableViaWiFi) {
                         
                         [SVProgressHUD showInfoWithStatus:WIFI_HINT];
-                        [self shared]->_wasWifi = YES;
                     }
                     break;
                     
                 default:
                     break;
+            }
+            [self shared]->_connectStatus = status;
+            
+            // 回调
+            for (id<NetCheckWaitorDelegate> delegate in [self shared].delegates) {
+                
+                if ([delegate respondsToSelector:@selector(netDidChangeToStatus:withWaitor:)]) {
+                    [delegate netDidChangeToStatus:status withWaitor:[self shared]];
+                }
             }
         }];
         [manager startMonitoring];
@@ -81,13 +93,33 @@ SINGLETON(NetCheckWaitor)
 }
 
 /**
- 判断联网状态
+ 获取联网状态
  
- @return 是否联网
+ @return 联网状态
  */
-+ (BOOL)isConnected {
++ (AFNetworkReachabilityStatus)getConnectStatus {
     
-    return [self shared]->_connected;
+    return [self shared]->_connectStatus;
+}
+
+/**
+ 添加代理
+ 
+ @param delegate 代理
+ */
++ (void)addDelegate:(nonnull NSObject<NetCheckWaitorDelegate> *)delegate {
+    
+    [[self shared].delegates addObject:delegate];
+}
+
+/**
+ 移除代理
+ 
+ @param delegate 代理
+ */
++ (void)removeDelegate:(nonnull NSObject<NetCheckWaitorDelegate> *)delegate {
+    
+    [[self shared].delegates removeObject:delegate];
 }
 
 @end

@@ -14,7 +14,6 @@
 		1D25A2D31FBB3EEA00C80A80 /* UILabel+WGExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D25A2CA1FBB3EEA00C80A80 /* UILabel+WGExtension.m */; };
 		1D25A2D41FBB3EEA00C80A80 /* UIView+WGExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D25A2CC1FBB3EEA00C80A80 /* UIView+WGExtension.m */; };
 		1D25A2DA1FBB3F9900C80A80 /* KeyChainStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D25A2D71FBB3F9900C80A80 /* KeyChainStore.m */; };
-		1D25A2DE1FBB428400C80A80 /* UUID.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D25A2DD1FBB428400C80A80 /* UUID.m */; };
 		1D25A2EC1FBB456F00C80A80 /* LoginVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D25A2EB1FBB456F00C80A80 /* LoginVC.m */; };
 		1DAB0D111FBA639800A87BED /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DAB0D101FBA639800A87BED /* AppDelegate.m */; };
 		1DAB0D191FBA639800A87BED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1DAB0D181FBA639800A87BED /* Assets.xcassets */; };
@@ -32,6 +31,8 @@
 		1DE2FCA91FBC3FB400763313 /* HTTPHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DE2FCA81FBC3FB400763313 /* HTTPHelper.m */; };
 		1DE2FCC01FBC47F100763313 /* NetCheckWaitor.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DE2FCBF1FBC47F100763313 /* NetCheckWaitor.m */; };
 		4E8CAF1174D7409F842EF8E1 /* libPods-PuChi.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BDEB8CB8F3230A718C1130E6 /* libPods-PuChi.a */; };
+		64AA6A8F2032859D006252BA /* UUIDHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 64AA6A8D2032859D006252BA /* UUIDHelper.m */; };
+		64AA6A95203286DD006252BA /* NetHintConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 64AA6A93203286DD006252BA /* NetHintConst.m */; };
 		64F949381FDE25DC00560458 /* KeyHeaderConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 64F949371FDE25DC00560458 /* KeyHeaderConst.m */; };
 /* End PBXBuildFile section */
 
@@ -51,8 +52,6 @@
 		1D25A2CD1FBB3EEA00C80A80 /* WGExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WGExtension.h; sourceTree = "<group>"; };
 		1D25A2D61FBB3F9900C80A80 /* KeyChainStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeyChainStore.h; sourceTree = "<group>"; };
 		1D25A2D71FBB3F9900C80A80 /* KeyChainStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeyChainStore.m; sourceTree = "<group>"; };
-		1D25A2DC1FBB428400C80A80 /* UUID.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UUID.h; sourceTree = "<group>"; };
-		1D25A2DD1FBB428400C80A80 /* UUID.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UUID.m; sourceTree = "<group>"; };
 		1D25A2EA1FBB456F00C80A80 /* LoginVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginVC.h; sourceTree = "<group>"; };
 		1D25A2EB1FBB456F00C80A80 /* LoginVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginVC.m; sourceTree = "<group>"; };
 		1DAB0D0C1FBA639800A87BED /* PuChi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PuChi.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -86,7 +85,10 @@
 		1DE2FCA81FBC3FB400763313 /* HTTPHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTTPHelper.m; sourceTree = "<group>"; };
 		1DE2FCBE1FBC47F100763313 /* NetCheckWaitor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NetCheckWaitor.h; sourceTree = "<group>"; };
 		1DE2FCBF1FBC47F100763313 /* NetCheckWaitor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NetCheckWaitor.m; sourceTree = "<group>"; };
-		1DE2FCC11FBC52FF00763313 /* NetHintMacro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NetHintMacro.h; sourceTree = "<group>"; };
+		64AA6A8D2032859D006252BA /* UUIDHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UUIDHelper.m; sourceTree = "<group>"; };
+		64AA6A8E2032859D006252BA /* UUIDHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UUIDHelper.h; sourceTree = "<group>"; };
+		64AA6A92203286DD006252BA /* NetHintConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetHintConst.h; sourceTree = "<group>"; };
+		64AA6A93203286DD006252BA /* NetHintConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetHintConst.m; sourceTree = "<group>"; };
 		64F949361FDE25DC00560458 /* KeyHeaderConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeyHeaderConst.h; sourceTree = "<group>"; };
 		64F949371FDE25DC00560458 /* KeyHeaderConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeyHeaderConst.m; sourceTree = "<group>"; };
 		A6CDD1ECEDF54BD02152B835 /* Pods-PuChi.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PuChi.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PuChi/Pods-PuChi.debug.xcconfig"; sourceTree = "<group>"; };
@@ -128,8 +130,8 @@
 		1D25A2D51FBB3F9900C80A80 /* UUID */ = {
 			isa = PBXGroup;
 			children = (
-				1D25A2DC1FBB428400C80A80 /* UUID.h */,
-				1D25A2DD1FBB428400C80A80 /* UUID.m */,
+				64AA6A8E2032859D006252BA /* UUIDHelper.h */,
+				64AA6A8D2032859D006252BA /* UUIDHelper.m */,
 				1D25A2D61FBB3F9900C80A80 /* KeyChainStore.h */,
 				1D25A2D71FBB3F9900C80A80 /* KeyChainStore.m */,
 			);
@@ -514,7 +516,8 @@
 				1DE2FCA81FBC3FB400763313 /* HTTPHelper.m */,
 				1DE2FCBE1FBC47F100763313 /* NetCheckWaitor.h */,
 				1DE2FCBF1FBC47F100763313 /* NetCheckWaitor.m */,
-				1DE2FCC11FBC52FF00763313 /* NetHintMacro.h */,
+				64AA6A92203286DD006252BA /* NetHintConst.h */,
+				64AA6A93203286DD006252BA /* NetHintConst.m */,
 			);
 			path = HTTP;
 			sourceTree = "<group>";
@@ -669,7 +672,9 @@
 				1D25A2DA1FBB3F9900C80A80 /* KeyChainStore.m in Sources */,
 				1DE2FCA91FBC3FB400763313 /* HTTPHelper.m in Sources */,
 				1DAB0D821FBA7B6B00A87BED /* DiscoveryVC.m in Sources */,
+				64AA6A8F2032859D006252BA /* UUIDHelper.m in Sources */,
 				1D25A2D21FBB3EEA00C80A80 /* UIImage+WGExtension.m in Sources */,
+				64AA6A95203286DD006252BA /* NetHintConst.m in Sources */,
 				1DAB0D1F1FBA639800A87BED /* main.m in Sources */,
 				1DAB0D851FBA7B7400A87BED /* MineVC.m in Sources */,
 				1DAB0D7F1FBA7B5500A87BED /* MessageVC.m in Sources */,
@@ -682,7 +687,6 @@
 				1DAB0D791FBA7B2600A87BED /* HomeVC.m in Sources */,
 				1DE2FCC01FBC47F100763313 /* NetCheckWaitor.m in Sources */,
 				1DE2FCA01FBBC8D300763313 /* ConfigWaitor.m in Sources */,
-				1D25A2DE1FBB428400C80A80 /* UUID.m in Sources */,
 				1D25A2EC1FBB456F00C80A80 /* LoginVC.m in Sources */,
 				1D25A2CE1FBB3EEA00C80A80 /* Base+WGExtension.m in Sources */,
 				1D25A2D01FBB3EEA00C80A80 /* NSDictionary+WGExtension.m in Sources */,

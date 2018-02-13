@@ -7,7 +7,7 @@
 //
 
 #import "NetCheckWaitor.h"
-#import "NetHintMacro.h"
+#import "NetHintConst.h"
 
 @interface NetCheckWaitor ()
 
@@ -57,21 +57,21 @@ SINGLETON(NetCheckWaitor)
                     
                 case AFNetworkReachabilityStatusNotReachable: // 无网络
                     
-                    [SVProgressHUD showErrorWithStatus:NO_HINT];
+                    [SVProgressHUD showErrorWithStatus:NetHintConstNoHint];
                     
                     break;
                     
                 case AFNetworkReachabilityStatusReachableViaWWAN: // 手机网络
                     
-                    [SVProgressHUD showInfoWithStatus:WWAN_HINT];
+                    [SVProgressHUD showInfoWithStatus:NetHintConstWWANHint];
                     
                     break;
                     
-                case AFNetworkReachabilityStatusReachableViaWiFi: // Wifi
+                case AFNetworkReachabilityStatusReachableViaWiFi: // WiFi
                     
                     if ([self shared]->_connectStatus != AFNetworkReachabilityStatusReachableViaWiFi) {
                         
-                        [SVProgressHUD showInfoWithStatus:WIFI_HINT];
+                        [SVProgressHUD showInfoWithStatus:NetHintConstWiFiHint];
                     }
                     break;
                     

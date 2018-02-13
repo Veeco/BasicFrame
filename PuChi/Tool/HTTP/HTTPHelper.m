@@ -8,7 +8,7 @@
 
 #import "HTTPHelper.h"
 #import "AFNetworking.h"
-#import "NetHintMacro.h"
+#import "NetHintConst.h"
 
 @implementation HTTPHelper
 
@@ -80,7 +80,7 @@ static AFHTTPSessionManager *kManager;
  */
 + (void)timeoutHint {
     
-    [SVProgressHUD showErrorWithStatus:TIMEOUT_HINT];
+    [SVProgressHUD showErrorWithStatus:NetHintConstNoHint];
 }
 
 @end

@@ -10,13 +10,13 @@
 @implementation UIImage (WGExtension)
 
 /**
- * 生成圆形图片
+ * 获取圆形图片
  * 参数 borderWidth 边框宽度
  * 参数 borderColor 边框颜色
  * 返回 圆形图片
  * 注意 边框宽度会在原图基础外围添加, 即如果传入 borderWidth 会导致返回图片宽高变大; 原图不为正方形时, 会以较长一边作为基准
  */
-- (nonnull UIImage *)wg_imageRoundWithBorderWidth:(CGFloat)borderWidth borderColor:(nullable UIColor *)borderColor {
+- (nonnull UIImage *)wg_getRoundImageWithBorderWidth:(CGFloat)borderWidth borderColor:(nullable UIColor *)borderColor {
 
     // 内圆图片宽高
     CGFloat innerImageWH = MAX(self.size.width, self.size.height);
@@ -49,6 +49,26 @@
     UIGraphicsEndImageContext();
     
     return roundImage;
+}
+
+/**
+ 获取竖直长图缩放后的顶端部分图片
+ 
+ @param width 缩放的目标宽度
+ @param topHeight 缩放后顶端部分图片的高度
+ @return 顶端部分图片
+ */
+- (nonnull UIImage *)wg_getTopImageWithWidth:(CGFloat)width topHeight:(CGFloat)topHeight {
+    
+    if (self.size.width > self.size.height) return self;
+    
+    UIGraphicsBeginImageContext(CGSizeMake(width, topHeight));
+    CGFloat drawHeight = width * self.size.height / self.size.width;
+    [self drawInRect:CGRectMake(0, 0, width, drawHeight)];
+    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    
+    return image;
 }
 
 @end

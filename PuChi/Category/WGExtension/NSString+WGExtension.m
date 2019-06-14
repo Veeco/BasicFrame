@@ -27,7 +27,7 @@
         
         [result appendFormat:@"%02x", buff[i]];
     }
-    return result.uppercaseString;
+    return result;
 }
 
 /**

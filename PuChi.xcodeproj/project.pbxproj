@@ -664,7 +664,6 @@
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -831,7 +830,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = FX95597622;
+				DEVELOPMENT_TEAM = R85HWCYH8Y;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/PuChi/Header/PrefixHeader.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/PuChi/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -848,7 +847,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = FX95597622;
+				DEVELOPMENT_TEAM = R85HWCYH8Y;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/PuChi/Header/PrefixHeader.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/PuChi/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;

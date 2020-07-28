@@ -9,9 +9,6 @@
 #ifndef PrefixHeader_pch
 #define PrefixHeader_pch
 
-#import "UtilHeader.h"
-#import "ColorHeader.h"
-#import "UIView+WGExtension.h"
 #import "ConfigWaitor.h"
 #import "User.h"
 

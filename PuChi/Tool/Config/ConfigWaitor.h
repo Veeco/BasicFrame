@@ -24,7 +24,7 @@ typedef NS_ENUM(NSUInteger, LoginStatus) {
 @interface ConfigWaitor : NSObject
 
 /** 单例 */
-@property (class, nonnull, nonatomic, readonly) __kindof ConfigWaitor *singletonConfigWaitor;
+@property (class, nonnull, nonatomic, readonly) __kindof ConfigWaitor *sharedSingleton;
 
 /** 运行环境 */
 @property (assign, nonatomic) EnviType enviType;

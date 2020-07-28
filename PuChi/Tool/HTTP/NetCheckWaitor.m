@@ -9,7 +9,7 @@
 #import "NetCheckWaitor.h"
 #import "NetHintConst.h"
 
-@interface NetCheckWaitor ()
+@interface NetCheckWaitor () <NSCopying, NSMutableCopying>
 
 {
     // 联网状态
@@ -36,7 +36,30 @@
 #pragma mark - <Normal>
 
 // 单例
-SINGLETON(NetCheckWaitor)
++ (__kindof NetCheckWaitor *)sharedSingleton {
+
+    return [[self alloc] init];
+}
+
++ (__kindof NetCheckWaitor *)allocWithZone:(struct _NSZone *)zone {
+    
+    static NetCheckWaitor *kSharedSingleton;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        kSharedSingleton = [super allocWithZone:zone];
+    });
+    return kSharedSingleton;
+}
+
+- (id)copyWithZone:(NSZone *)zone {
+    
+    return self;
+}
+
+- (id)mutableCopyWithZone:(NSZone *)zone {
+    
+    return self;
+}
 
 /**
  开启网络检测
@@ -47,7 +70,7 @@ SINGLETON(NetCheckWaitor)
     dispatch_once(&onceToken, ^{
         
         // 初始化, 以防 Wifi 进入造成多余提示
-        [self shared]->_connectStatus = AFNetworkReachabilityStatusReachableViaWiFi;
+        [self sharedSingleton]->_connectStatus = AFNetworkReachabilityStatusReachableViaWiFi;
         
         AFNetworkReachabilityManager *manager = [AFNetworkReachabilityManager sharedManager];
         
@@ -69,7 +92,7 @@ SINGLETON(NetCheckWaitor)
                     
                 case AFNetworkReachabilityStatusReachableViaWiFi: // WiFi
                     
-                    if ([self shared]->_connectStatus != AFNetworkReachabilityStatusReachableViaWiFi) {
+                    if ([self sharedSingleton]->_connectStatus != AFNetworkReachabilityStatusReachableViaWiFi) {
                         
                         [SVProgressHUD showInfoWithStatus:NetHintConstWiFiHint];
                     }
@@ -78,13 +101,13 @@ SINGLETON(NetCheckWaitor)
                 default:
                     break;
             }
-            [self shared]->_connectStatus = status;
+            [self sharedSingleton]->_connectStatus = status;
             
             // 回调
-            for (id<NetCheckWaitorDelegate> delegate in [self shared].delegates) {
+            for (id<NetCheckWaitorDelegate> delegate in [self sharedSingleton].delegates) {
                 
                 if ([delegate respondsToSelector:@selector(netDidChangeToStatus:withWaitor:)]) {
-                    [delegate netDidChangeToStatus:status withWaitor:[self shared]];
+                    [delegate netDidChangeToStatus:status withWaitor:[self sharedSingleton]];
                 }
             }
         }];
@@ -99,7 +122,7 @@ SINGLETON(NetCheckWaitor)
  */
 + (AFNetworkReachabilityStatus)getConnectStatus {
     
-    return [self shared]->_connectStatus;
+    return [self sharedSingleton]->_connectStatus;
 }
 
 /**
@@ -109,7 +132,7 @@ SINGLETON(NetCheckWaitor)
  */
 + (void)addDelegate:(nonnull NSObject<NetCheckWaitorDelegate> *)delegate {
     
-    [[self shared].delegates addObject:delegate];
+    [[self sharedSingleton].delegates addObject:delegate];
 }
 
 /**
@@ -119,7 +142,7 @@ SINGLETON(NetCheckWaitor)
  */
 + (void)removeDelegate:(nonnull NSObject<NetCheckWaitorDelegate> *)delegate {
     
-    [[self shared].delegates removeObject:delegate];
+    [[self sharedSingleton].delegates removeObject:delegate];
 }
 
 @end

@@ -8,17 +8,39 @@
 
 #import "ConfigWaitor.h"
 
+@interface ConfigWaitor () <NSCopying, NSMutableCopying>
+
+@end
+
 // 运行环境 key
 static NSString *const kEnviTypeKey = @"kEnviTypeKey";
 
 @implementation ConfigWaitor
 
 // 单例
-SINGLETON(ConfigWaitor)
++ (__kindof ConfigWaitor *)sharedSingleton {
 
-+ (ConfigWaitor *)singletonConfigWaitor {
+    return [[self alloc] init];
+}
+
++ (__kindof ConfigWaitor *)allocWithZone:(struct _NSZone *)zone {
     
-    return [self shared];
+    static ConfigWaitor *kSharedSingleton;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        kSharedSingleton = [super allocWithZone:zone];
+    });
+    return kSharedSingleton;
+}
+
+- (id)copyWithZone:(NSZone *)zone {
+    
+    return self;
+}
+
+- (id)mutableCopyWithZone:(NSZone *)zone {
+    
+    return self;
 }
 
 - (EnviType)enviType {

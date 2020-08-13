@@ -10,8 +10,8 @@
 
 // 运行环境
 typedef NS_ENUM(NSUInteger, EnviType) {
-    EnviTypeRelease, // 发布
-    EnviTypeDebug // 调试
+    EnviTypeDistribute, // 发布
+    EnviTypeDevelop // 调试
 };
 
 // 登录状态

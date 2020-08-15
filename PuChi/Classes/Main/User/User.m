@@ -10,26 +10,23 @@
 
 @implementation User
 
-// 单例
 static User *kInstance;
 
-+ (User *)singletonUser {
-    
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
-        
-        kInstance = [self new];
-    });
++ (User *)myself {
+    if (!kInstance) {
+     
+        static dispatch_once_t onceToken;
+        dispatch_once(&onceToken, ^{
+            
+            kInstance = [User new];
+        });
+    }
     return kInstance;
 }
 
-+ (void)setSingletonUser:(__kindof User *)singletonUser {
-    
-    [self singletonUser];
-    
-    kInstance.ID = singletonUser.ID;
-    kInstance.nickName = singletonUser.nickName;
-    kInstance.icon = singletonUser.icon;
++ (void)setMyself:(__kindof User *)myself {
+        
+    kInstance = myself;
 }
 
 @end

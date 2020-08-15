@@ -47,8 +47,6 @@ static AFHTTPSessionManager *kManager;
         
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         
-        // 超时提示
-        [self timeoutHint];
         !failure ?: failure(error);
     }];
 }
@@ -69,18 +67,8 @@ static AFHTTPSessionManager *kManager;
         
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
 
-        // 超时提示
-        [self timeoutHint];
         !failure ?: failure(error);
     }];
-}
-
-/**
- 超时提示
- */
-+ (void)timeoutHint {
-    
-    [SVProgressHUD showErrorWithStatus:NetHintConstNoHint];
 }
 
 @end

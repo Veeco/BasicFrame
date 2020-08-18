@@ -13,7 +13,7 @@
 @end
 
 // 运行环境 key
-static NSString *const kEnviTypeKey = @"kEnviTypeKey";
+static NSString *const kEnviTypeKey = @"EnviType";
 
 @implementation ConfigWaitor
 

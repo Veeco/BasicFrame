@@ -45,12 +45,23 @@ static NSString *const kEnviTypeKey = @"EnviType";
 
 - (EnviType)enviType {
     
-    return [[NSUserDefaults.standardUserDefaults objectForKey:kEnviTypeKey] integerValue];
+    NSNumber *typeN = [NSUserDefaults.standardUserDefaults objectForKey:kEnviTypeKey];
+    
+#if DEBUG
+    if (!typeN) {
+        typeN = @(EnviTypeDevelop);
+    }
+#else
+    typeN = @(EnviTypeDistribute);
+#endif
+    
+    return [typeN integerValue];
 }
 
 - (void)setEnviType:(EnviType)enviType {
     
     [NSUserDefaults.standardUserDefaults setObject:@(enviType) forKey:kEnviTypeKey];
+    [NSUserDefaults.standardUserDefaults synchronize];
 }
 
 @end

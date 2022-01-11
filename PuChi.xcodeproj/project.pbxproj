@@ -161,26 +161,16 @@
 		1DAB0D0E1FBA639800A87BED /* PuChi */ = {
 			isa = PBXGroup;
 			children = (
+				647EA60F278D6DAC0036543C /* Config */,
 				1DAB0D261FBA700200A87BED /* Classes */,
-				1DAB0D861FBA82E700A87BED /* Tool */,
+				1DAB0D861FBA82E700A87BED /* Util */,
+				647EA611278D6E070036543C /* Component */,
 				1DAB0D871FBA82F700A87BED /* Category */,
-				1DAB0D881FBA831000A87BED /* Header */,
-				1DAB0D0F1FBA639800A87BED /* AppDelegate.h */,
-				1DAB0D101FBA639800A87BED /* AppDelegate.m */,
-				1DAB0D251FBA6F5700A87BED /* Supporting Files */,
+				647EA612278D6E260036543C /* Router */,
+				647EA613278D6E350036543C /* Resource */,
+				647EA610278D6DDE0036543C /* Other */,
 			);
 			path = PuChi;
-			sourceTree = "<group>";
-		};
-		1DAB0D251FBA6F5700A87BED /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				1DAB0D181FBA639800A87BED /* Assets.xcassets */,
-				1DAB0D1A1FBA639800A87BED /* LaunchScreen.storyboard */,
-				1DAB0D1D1FBA639800A87BED /* Info.plist */,
-				1DAB0D1E1FBA639800A87BED /* main.m */,
-			);
-			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		1DAB0D261FBA700200A87BED /* Classes */ = {
@@ -422,14 +412,13 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		1DAB0D861FBA82E700A87BED /* Tool */ = {
+		1DAB0D861FBA82E700A87BED /* Util */ = {
 			isa = PBXGroup;
 			children = (
-				1DE2FC9D1FBBC65500763313 /* Config */,
 				1D25A2D51FBB3F9900C80A80 /* UUID */,
 				1DE2FCA51FBBEC0F00763313 /* HTTP */,
 			);
-			path = Tool;
+			path = Util;
 			sourceTree = "<group>";
 		};
 		1DAB0D871FBA82F700A87BED /* Category */ = {
@@ -447,15 +436,6 @@
 				64F949371FDE25DC00560458 /* KeyHeaderConst.m */,
 			);
 			path = Header;
-			sourceTree = "<group>";
-		};
-		1DE2FC9D1FBBC65500763313 /* Config */ = {
-			isa = PBXGroup;
-			children = (
-				1DE2FC9E1FBBC8D300763313 /* ConfigWaitor.h */,
-				1DE2FC9F1FBBC8D300763313 /* ConfigWaitor.m */,
-			);
-			path = Config;
 			sourceTree = "<group>";
 		};
 		1DE2FCA11FBBE24900763313 /* User */ = {
@@ -478,6 +458,50 @@
 				64AA6A93203286DD006252BA /* NetHintConst.m */,
 			);
 			path = HTTP;
+			sourceTree = "<group>";
+		};
+		647EA60F278D6DAC0036543C /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				1DAB0D881FBA831000A87BED /* Header */,
+				1DE2FC9E1FBBC8D300763313 /* ConfigWaitor.h */,
+				1DE2FC9F1FBBC8D300763313 /* ConfigWaitor.m */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
+		647EA610278D6DDE0036543C /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				1DAB0D0F1FBA639800A87BED /* AppDelegate.h */,
+				1DAB0D101FBA639800A87BED /* AppDelegate.m */,
+				1DAB0D1A1FBA639800A87BED /* LaunchScreen.storyboard */,
+				1DAB0D1D1FBA639800A87BED /* Info.plist */,
+				1DAB0D1E1FBA639800A87BED /* main.m */,
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		647EA611278D6E070036543C /* Component */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Component;
+			sourceTree = "<group>";
+		};
+		647EA612278D6E260036543C /* Router */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		647EA613278D6E350036543C /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				1DAB0D181FBA639800A87BED /* Assets.xcassets */,
+			);
+			path = Resource;
 			sourceTree = "<group>";
 		};
 		64F16F8E5C8CF60305AA8C28 /* Pods */ = {
@@ -770,9 +794,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = R85HWCYH8Y;
-				GCC_PREFIX_HEADER = "$(SRCROOT)/PuChi/Header/PrefixHeader.pch";
-				INFOPLIST_FILE = "$(SRCROOT)/PuChi/Supporting Files/Info.plist";
+				DEVELOPMENT_TEAM = 5N565F3BQ9;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/PuChi/Config/Header/PrefixHeader.pch";
+				INFOPLIST_FILE = "$(SRCROOT)/PuChi/Other/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.chance.puchi;
@@ -787,9 +811,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = R85HWCYH8Y;
-				GCC_PREFIX_HEADER = "$(SRCROOT)/PuChi/Header/PrefixHeader.pch";
-				INFOPLIST_FILE = "$(SRCROOT)/PuChi/Supporting Files/Info.plist";
+				DEVELOPMENT_TEAM = 5N565F3BQ9;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/PuChi/Config/Header/PrefixHeader.pch";
+				INFOPLIST_FILE = "$(SRCROOT)/PuChi/Other/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.chance.puchi;

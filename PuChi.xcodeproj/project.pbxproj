@@ -7,32 +7,29 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1D25A2DA1FBB3F9900C80A80 /* KeyChainStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D25A2D71FBB3F9900C80A80 /* KeyChainStore.m */; };
 		1D25A2EC1FBB456F00C80A80 /* LoginVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D25A2EB1FBB456F00C80A80 /* LoginVC.m */; };
 		1DAB0D111FBA639800A87BED /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DAB0D101FBA639800A87BED /* AppDelegate.m */; };
 		1DAB0D191FBA639800A87BED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1DAB0D181FBA639800A87BED /* Assets.xcassets */; };
 		1DAB0D1C1FBA639800A87BED /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1DAB0D1A1FBA639800A87BED /* LaunchScreen.storyboard */; };
 		1DAB0D1F1FBA639800A87BED /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DAB0D1E1FBA639800A87BED /* main.m */; };
-		1DAB0D2B1FBA74F300A87BED /* PCTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DAB0D2A1FBA74F300A87BED /* PCTabBarController.m */; };
-		1DAB0D2E1FBA77DC00A87BED /* PCNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DAB0D2D1FBA77DC00A87BED /* PCNavigationController.m */; };
+		1DAB0D2B1FBA74F300A87BED /* BaseTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DAB0D2A1FBA74F300A87BED /* BaseTabBarController.m */; };
+		1DAB0D2E1FBA77DC00A87BED /* BaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DAB0D2D1FBA77DC00A87BED /* BaseNavigationController.m */; };
 		1DAB0D791FBA7B2600A87BED /* HomeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DAB0D781FBA7B2600A87BED /* HomeVC.m */; };
 		1DAB0D7C1FBA7B4400A87BED /* ContentVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DAB0D7B1FBA7B4400A87BED /* ContentVC.m */; };
 		1DAB0D7F1FBA7B5500A87BED /* MessageVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DAB0D7E1FBA7B5500A87BED /* MessageVC.m */; };
 		1DAB0D821FBA7B6B00A87BED /* DiscoveryVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DAB0D811FBA7B6B00A87BED /* DiscoveryVC.m */; };
 		1DAB0D851FBA7B7400A87BED /* MineVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DAB0D841FBA7B7400A87BED /* MineVC.m */; };
-		1DE2FCA01FBBC8D300763313 /* ConfigWaitor.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DE2FC9F1FBBC8D300763313 /* ConfigWaitor.m */; };
+		1DE2FCA01FBBC8D300763313 /* ConfigManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DE2FC9F1FBBC8D300763313 /* ConfigManager.m */; };
 		1DE2FCA41FBBE26600763313 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DE2FCA31FBBE26600763313 /* User.m */; };
-		1DE2FCA91FBC3FB400763313 /* HTTPHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DE2FCA81FBC3FB400763313 /* HTTPHelper.m */; };
-		1DE2FCC01FBC47F100763313 /* NetCheckWaitor.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DE2FCBF1FBC47F100763313 /* NetCheckWaitor.m */; };
+		1DE2FCA91FBC3FB400763313 /* HTTPUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DE2FCA81FBC3FB400763313 /* HTTPUtil.m */; };
+		1DE2FCC01FBC47F100763313 /* NetCheckUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DE2FCBF1FBC47F100763313 /* NetCheckUtil.m */; };
 		4E8CAF1174D7409F842EF8E1 /* libPods-PuChi.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BDEB8CB8F3230A718C1130E6 /* libPods-PuChi.a */; };
-		64AA6A8F2032859D006252BA /* UUIDHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 64AA6A8D2032859D006252BA /* UUIDHelper.m */; };
+		6484A0B828E2A1D9007A08EF /* BaseVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 6484A0B728E2A1D9007A08EF /* BaseVC.m */; };
 		64AA6A95203286DD006252BA /* NetHintConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 64AA6A93203286DD006252BA /* NetHintConst.m */; };
 		64F949381FDE25DC00560458 /* KeyHeaderConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 64F949371FDE25DC00560458 /* KeyHeaderConst.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		1D25A2D61FBB3F9900C80A80 /* KeyChainStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeyChainStore.h; sourceTree = "<group>"; };
-		1D25A2D71FBB3F9900C80A80 /* KeyChainStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeyChainStore.m; sourceTree = "<group>"; };
 		1D25A2EA1FBB456F00C80A80 /* LoginVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginVC.h; sourceTree = "<group>"; };
 		1D25A2EB1FBB456F00C80A80 /* LoginVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginVC.m; sourceTree = "<group>"; };
 		1DAB0D0C1FBA639800A87BED /* PuChi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PuChi.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -42,10 +39,10 @@
 		1DAB0D1B1FBA639800A87BED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1DAB0D1D1FBA639800A87BED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1DAB0D1E1FBA639800A87BED /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		1DAB0D291FBA74F300A87BED /* PCTabBarController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PCTabBarController.h; sourceTree = "<group>"; };
-		1DAB0D2A1FBA74F300A87BED /* PCTabBarController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PCTabBarController.m; sourceTree = "<group>"; };
-		1DAB0D2C1FBA77DC00A87BED /* PCNavigationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PCNavigationController.h; sourceTree = "<group>"; };
-		1DAB0D2D1FBA77DC00A87BED /* PCNavigationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PCNavigationController.m; sourceTree = "<group>"; };
+		1DAB0D291FBA74F300A87BED /* BaseTabBarController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseTabBarController.h; sourceTree = "<group>"; };
+		1DAB0D2A1FBA74F300A87BED /* BaseTabBarController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseTabBarController.m; sourceTree = "<group>"; };
+		1DAB0D2C1FBA77DC00A87BED /* BaseNavigationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseNavigationController.h; sourceTree = "<group>"; };
+		1DAB0D2D1FBA77DC00A87BED /* BaseNavigationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseNavigationController.m; sourceTree = "<group>"; };
 		1DAB0D771FBA7B2600A87BED /* HomeVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeVC.h; sourceTree = "<group>"; };
 		1DAB0D781FBA7B2600A87BED /* HomeVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeVC.m; sourceTree = "<group>"; };
 		1DAB0D7A1FBA7B4400A87BED /* ContentVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ContentVC.h; sourceTree = "<group>"; };
@@ -57,16 +54,16 @@
 		1DAB0D831FBA7B7400A87BED /* MineVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MineVC.h; sourceTree = "<group>"; };
 		1DAB0D841FBA7B7400A87BED /* MineVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MineVC.m; sourceTree = "<group>"; };
 		1DAB0D891FBA842100A87BED /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
-		1DE2FC9E1FBBC8D300763313 /* ConfigWaitor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ConfigWaitor.h; sourceTree = "<group>"; };
-		1DE2FC9F1FBBC8D300763313 /* ConfigWaitor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ConfigWaitor.m; sourceTree = "<group>"; };
+		1DE2FC9E1FBBC8D300763313 /* ConfigManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ConfigManager.h; sourceTree = "<group>"; };
+		1DE2FC9F1FBBC8D300763313 /* ConfigManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ConfigManager.m; sourceTree = "<group>"; };
 		1DE2FCA21FBBE26600763313 /* User.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
 		1DE2FCA31FBBE26600763313 /* User.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
-		1DE2FCA71FBC3FB400763313 /* HTTPHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTTPHelper.h; sourceTree = "<group>"; };
-		1DE2FCA81FBC3FB400763313 /* HTTPHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTTPHelper.m; sourceTree = "<group>"; };
-		1DE2FCBE1FBC47F100763313 /* NetCheckWaitor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NetCheckWaitor.h; sourceTree = "<group>"; };
-		1DE2FCBF1FBC47F100763313 /* NetCheckWaitor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NetCheckWaitor.m; sourceTree = "<group>"; };
-		64AA6A8D2032859D006252BA /* UUIDHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UUIDHelper.m; sourceTree = "<group>"; };
-		64AA6A8E2032859D006252BA /* UUIDHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UUIDHelper.h; sourceTree = "<group>"; };
+		1DE2FCA71FBC3FB400763313 /* HTTPUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTTPUtil.h; sourceTree = "<group>"; };
+		1DE2FCA81FBC3FB400763313 /* HTTPUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTTPUtil.m; sourceTree = "<group>"; };
+		1DE2FCBE1FBC47F100763313 /* NetCheckUtil.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NetCheckUtil.h; sourceTree = "<group>"; };
+		1DE2FCBF1FBC47F100763313 /* NetCheckUtil.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NetCheckUtil.m; sourceTree = "<group>"; };
+		6484A0B628E2A1D9007A08EF /* BaseVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseVC.h; sourceTree = "<group>"; };
+		6484A0B728E2A1D9007A08EF /* BaseVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseVC.m; sourceTree = "<group>"; };
 		64AA6A92203286DD006252BA /* NetHintConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetHintConst.h; sourceTree = "<group>"; };
 		64AA6A93203286DD006252BA /* NetHintConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetHintConst.m; sourceTree = "<group>"; };
 		64F949361FDE25DC00560458 /* KeyHeaderConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeyHeaderConst.h; sourceTree = "<group>"; };
@@ -88,17 +85,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		1D25A2D51FBB3F9900C80A80 /* UUID */ = {
-			isa = PBXGroup;
-			children = (
-				64AA6A8E2032859D006252BA /* UUIDHelper.h */,
-				64AA6A8D2032859D006252BA /* UUIDHelper.m */,
-				1D25A2D61FBB3F9900C80A80 /* KeyChainStore.h */,
-				1D25A2D71FBB3F9900C80A80 /* KeyChainStore.m */,
-			);
-			path = UUID;
-			sourceTree = "<group>";
-		};
 		1D25A2DF1FBB450F00C80A80 /* Login */ = {
 			isa = PBXGroup;
 			children = (
@@ -189,22 +175,24 @@
 		1DAB0D271FBA715600A87BED /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				1DAB0D281FBA747300A87BED /* System */,
+				1DAB0D281FBA747300A87BED /* Base */,
 				1D25A2DF1FBB450F00C80A80 /* Login */,
 				1DE2FCA11FBBE24900763313 /* User */,
 			);
 			path = Main;
 			sourceTree = "<group>";
 		};
-		1DAB0D281FBA747300A87BED /* System */ = {
+		1DAB0D281FBA747300A87BED /* Base */ = {
 			isa = PBXGroup;
 			children = (
-				1DAB0D291FBA74F300A87BED /* PCTabBarController.h */,
-				1DAB0D2A1FBA74F300A87BED /* PCTabBarController.m */,
-				1DAB0D2C1FBA77DC00A87BED /* PCNavigationController.h */,
-				1DAB0D2D1FBA77DC00A87BED /* PCNavigationController.m */,
+				1DAB0D291FBA74F300A87BED /* BaseTabBarController.h */,
+				1DAB0D2A1FBA74F300A87BED /* BaseTabBarController.m */,
+				1DAB0D2C1FBA77DC00A87BED /* BaseNavigationController.h */,
+				1DAB0D2D1FBA77DC00A87BED /* BaseNavigationController.m */,
+				6484A0B628E2A1D9007A08EF /* BaseVC.h */,
+				6484A0B728E2A1D9007A08EF /* BaseVC.m */,
 			);
-			path = System;
+			path = Base;
 			sourceTree = "<group>";
 		};
 		1DAB0D361FBA7A1500A87BED /* Discovery */ = {
@@ -415,8 +403,8 @@
 		1DAB0D861FBA82E700A87BED /* Util */ = {
 			isa = PBXGroup;
 			children = (
-				1D25A2D51FBB3F9900C80A80 /* UUID */,
 				1DE2FCA51FBBEC0F00763313 /* HTTP */,
+				6484A0B928E2A5B6007A08EF /* Net */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -450,10 +438,8 @@
 		1DE2FCA51FBBEC0F00763313 /* HTTP */ = {
 			isa = PBXGroup;
 			children = (
-				1DE2FCA71FBC3FB400763313 /* HTTPHelper.h */,
-				1DE2FCA81FBC3FB400763313 /* HTTPHelper.m */,
-				1DE2FCBE1FBC47F100763313 /* NetCheckWaitor.h */,
-				1DE2FCBF1FBC47F100763313 /* NetCheckWaitor.m */,
+				1DE2FCA71FBC3FB400763313 /* HTTPUtil.h */,
+				1DE2FCA81FBC3FB400763313 /* HTTPUtil.m */,
 				64AA6A92203286DD006252BA /* NetHintConst.h */,
 				64AA6A93203286DD006252BA /* NetHintConst.m */,
 			);
@@ -464,8 +450,8 @@
 			isa = PBXGroup;
 			children = (
 				1DAB0D881FBA831000A87BED /* Header */,
-				1DE2FC9E1FBBC8D300763313 /* ConfigWaitor.h */,
-				1DE2FC9F1FBBC8D300763313 /* ConfigWaitor.m */,
+				1DE2FC9E1FBBC8D300763313 /* ConfigManager.h */,
+				1DE2FC9F1FBBC8D300763313 /* ConfigManager.m */,
 			);
 			path = Config;
 			sourceTree = "<group>";
@@ -502,6 +488,15 @@
 				1DAB0D181FBA639800A87BED /* Assets.xcassets */,
 			);
 			path = Resource;
+			sourceTree = "<group>";
+		};
+		6484A0B928E2A5B6007A08EF /* Net */ = {
+			isa = PBXGroup;
+			children = (
+				1DE2FCBE1FBC47F100763313 /* NetCheckUtil.h */,
+				1DE2FCBF1FBC47F100763313 /* NetCheckUtil.m */,
+			);
+			path = Net;
 			sourceTree = "<group>";
 		};
 		64F16F8E5C8CF60305AA8C28 /* Pods */ = {
@@ -650,21 +645,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				1DAB0D7C1FBA7B4400A87BED /* ContentVC.m in Sources */,
-				1D25A2DA1FBB3F9900C80A80 /* KeyChainStore.m in Sources */,
-				1DE2FCA91FBC3FB400763313 /* HTTPHelper.m in Sources */,
+				6484A0B828E2A1D9007A08EF /* BaseVC.m in Sources */,
+				1DE2FCA91FBC3FB400763313 /* HTTPUtil.m in Sources */,
 				1DAB0D821FBA7B6B00A87BED /* DiscoveryVC.m in Sources */,
-				64AA6A8F2032859D006252BA /* UUIDHelper.m in Sources */,
 				64AA6A95203286DD006252BA /* NetHintConst.m in Sources */,
 				1DAB0D1F1FBA639800A87BED /* main.m in Sources */,
 				1DAB0D851FBA7B7400A87BED /* MineVC.m in Sources */,
 				1DAB0D7F1FBA7B5500A87BED /* MessageVC.m in Sources */,
 				1DE2FCA41FBBE26600763313 /* User.m in Sources */,
-				1DAB0D2B1FBA74F300A87BED /* PCTabBarController.m in Sources */,
+				1DAB0D2B1FBA74F300A87BED /* BaseTabBarController.m in Sources */,
 				64F949381FDE25DC00560458 /* KeyHeaderConst.m in Sources */,
-				1DAB0D2E1FBA77DC00A87BED /* PCNavigationController.m in Sources */,
+				1DAB0D2E1FBA77DC00A87BED /* BaseNavigationController.m in Sources */,
 				1DAB0D791FBA7B2600A87BED /* HomeVC.m in Sources */,
-				1DE2FCC01FBC47F100763313 /* NetCheckWaitor.m in Sources */,
-				1DE2FCA01FBBC8D300763313 /* ConfigWaitor.m in Sources */,
+				1DE2FCC01FBC47F100763313 /* NetCheckUtil.m in Sources */,
+				1DE2FCA01FBBC8D300763313 /* ConfigManager.m in Sources */,
 				1D25A2EC1FBB456F00C80A80 /* LoginVC.m in Sources */,
 				1DAB0D111FBA639800A87BED /* AppDelegate.m in Sources */,
 			);

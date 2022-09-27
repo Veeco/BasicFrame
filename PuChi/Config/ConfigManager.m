@@ -1,31 +1,31 @@
 //
-//  ConfigWaitor.m
+//  ConfigManager.m
 //  PuChi
 //
 //  Created by Veeco on 2017/11/15.
 //  Copyright © 2017年 Chance. All rights reserved.
 //
 
-#import "ConfigWaitor.h"
+#import "ConfigManager.h"
 
-@interface ConfigWaitor () <NSCopying, NSMutableCopying>
+@interface ConfigManager () <NSCopying, NSMutableCopying>
 
 @end
 
 // 运行环境 key
 static NSString *const kEnviTypeKey = @"EnviType";
 
-@implementation ConfigWaitor
+@implementation ConfigManager
 
 // 单例
-+ (__kindof ConfigWaitor *)sharedSingleton {
++ (__kindof ConfigManager *)sharedSingleton {
 
     return [[self alloc] init];
 }
 
-+ (__kindof ConfigWaitor *)allocWithZone:(struct _NSZone *)zone {
++ (__kindof ConfigManager *)allocWithZone:(struct _NSZone *)zone {
     
-    static ConfigWaitor *kSharedSingleton;
+    static ConfigManager *kSharedSingleton;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         kSharedSingleton = [super allocWithZone:zone];

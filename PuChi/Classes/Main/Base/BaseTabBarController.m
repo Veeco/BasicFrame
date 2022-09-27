@@ -1,24 +1,24 @@
 //
-//  PCTabBarController.m
+//  BaseTabBarController.m
 //  PuChi
 //
 //  Created by Veeco on 2017/11/14.
 //  Copyright © 2017年 Chance. All rights reserved.
 //
 
-#import "PCTabBarController.h"
+#import "BaseTabBarController.h"
 #import "HomeVC.h"
 #import "ContentVC.h"
 #import "MessageVC.h"
 #import "DiscoveryVC.h"
 #import "MineVC.h"
-#import "PCNavigationController.h"
+#import "BaseNavigationController.h"
 
-@interface PCTabBarController ()
+@interface BaseTabBarController ()
 
 @end
 
-@implementation PCTabBarController
+@implementation BaseTabBarController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -88,7 +88,7 @@
     VC.tabBarItem.image = [UIImage imageNamed:image];
     VC.tabBarItem.selectedImage = [UIImage imageNamed:selectedImage];
     
-    PCNavigationController *nav = [[PCNavigationController alloc] initWithRootViewController:VC];
+    BaseNavigationController *nav = [[BaseNavigationController alloc] initWithRootViewController:VC];
     VC.title = title;
     
     [self addChildViewController:nav];

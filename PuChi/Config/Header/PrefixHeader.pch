@@ -9,7 +9,7 @@
 #ifndef PrefixHeader_pch
 #define PrefixHeader_pch
 
-#import "ConfigWaitor.h"
+#import "ConfigManager.h"
 #import "User.h"
 
 #import <SVProgressHUD.h>

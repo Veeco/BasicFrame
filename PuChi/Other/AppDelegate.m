@@ -7,8 +7,8 @@
 //
 
 #import "AppDelegate.h"
-#import "PCTabBarController.h"
-#import "NetCheckWaitor.h"
+#import "BaseTabBarController.h"
+#import "NetCheckUtil.h"
 
 @interface AppDelegate ()
 
@@ -21,11 +21,11 @@
     // Override point for customization after application launch.
     
     self.window = [[UIWindow alloc] initWithFrame:UIScreen.mainScreen.bounds];
-    self.window.rootViewController = [PCTabBarController new];
+    self.window.rootViewController = [BaseTabBarController new];
     [self.window makeKeyAndVisible];
     
     // 1. 开启网络检测
-    [NetCheckWaitor startNetCheck];
+    [NetCheckUtil startNetCheck];
 
     return YES;
 }

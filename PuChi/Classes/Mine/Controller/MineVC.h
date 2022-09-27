@@ -6,8 +6,8 @@
 //  Copyright © 2017年 Chance. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "BaseVC.h"
 
-@interface MineVC : UIViewController
+@interface MineVC : BaseVC
 
 @end

@@ -1,5 +1,5 @@
 //
-//  PCNavigationController.h
+//  BaseTabBarController.h
 //  PuChi
 //
 //  Created by Veeco on 2017/11/14.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface PCNavigationController : UINavigationController
+@interface BaseTabBarController : UITabBarController
 
 @end

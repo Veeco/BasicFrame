@@ -1,5 +1,5 @@
 //
-//  HTTPHelper.h
+//  HTTPUtil.h
 //  PuChi
 //
 //  Created by Veeco on 2017/11/15.
@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface HTTPHelper : NSObject
+@interface HTTPUtil : NSObject
 
 /**
  *  发送get请求

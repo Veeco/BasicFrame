@@ -1,15 +1,15 @@
 //
-//  NetCheckWaitor.m
+//  NetCheckUtil.m
 //  PuChi
 //
 //  Created by Veeco on 2017/11/15.
 //  Copyright © 2017年 Chance. All rights reserved.
 //
 
-#import "NetCheckWaitor.h"
+#import "NetCheckUtil.h"
 #import "NetHintConst.h"
 
-@interface NetCheckWaitor () <NSCopying, NSMutableCopying>
+@interface NetCheckUtil () <NSCopying, NSMutableCopying>
 
 {
     // 联网状态
@@ -17,11 +17,11 @@
 }
 
 /** 代理 */
-@property (nullable, nonatomic, strong) NSHashTable<NSObject<NetCheckWaitorDelegate> *> *delegates;
+@property (nullable, nonatomic, strong) NSHashTable<NSObject<NetCheckUtilDelegate> *> *delegates;
 
 @end
 
-@implementation NetCheckWaitor
+@implementation NetCheckUtil
 
 #pragma mark - <Lazy>
 
@@ -36,14 +36,14 @@
 #pragma mark - <Normal>
 
 // 单例
-+ (__kindof NetCheckWaitor *)sharedSingleton {
++ (__kindof NetCheckUtil *)sharedSingleton {
 
     return [[self alloc] init];
 }
 
-+ (__kindof NetCheckWaitor *)allocWithZone:(struct _NSZone *)zone {
++ (__kindof NetCheckUtil *)allocWithZone:(struct _NSZone *)zone {
     
-    static NetCheckWaitor *kSharedSingleton;
+    static NetCheckUtil *kSharedSingleton;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         kSharedSingleton = [super allocWithZone:zone];
@@ -104,7 +104,7 @@
             [self sharedSingleton]->_connectStatus = status;
             
             // 回调
-            for (id<NetCheckWaitorDelegate> delegate in [self sharedSingleton].delegates) {
+            for (id<NetCheckUtilDelegate> delegate in [self sharedSingleton].delegates) {
                 
                 if ([delegate respondsToSelector:@selector(netDidChangeToStatus:withWaitor:)]) {
                     [delegate netDidChangeToStatus:status withWaitor:[self sharedSingleton]];
@@ -130,7 +130,7 @@
  
  @param delegate 代理
  */
-+ (void)addDelegate:(nonnull NSObject<NetCheckWaitorDelegate> *)delegate {
++ (void)addDelegate:(nonnull NSObject<NetCheckUtilDelegate> *)delegate {
     
     [[self sharedSingleton].delegates addObject:delegate];
 }
@@ -140,7 +140,7 @@
  
  @param delegate 代理
  */
-+ (void)removeDelegate:(nonnull NSObject<NetCheckWaitorDelegate> *)delegate {
++ (void)removeDelegate:(nonnull NSObject<NetCheckUtilDelegate> *)delegate {
     
     [[self sharedSingleton].delegates removeObject:delegate];
 }

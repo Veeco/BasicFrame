@@ -6,8 +6,8 @@
 //  Copyright © 2017年 Chance. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "BaseVC.h"
 
-@interface MessageVC : UIViewController
+@interface MessageVC : BaseVC
 
 @end

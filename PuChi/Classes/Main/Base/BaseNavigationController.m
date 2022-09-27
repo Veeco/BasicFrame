@@ -1,18 +1,18 @@
 //
-//  PCNavigationController.m
+//  BaseNavigationController.m
 //  PuChi
 //
 //  Created by Veeco on 2017/11/14.
 //  Copyright © 2017年 Chance. All rights reserved.
 //
 
-#import "PCNavigationController.h"
+#import "BaseNavigationController.h"
 
-@interface PCNavigationController ()
+@interface BaseNavigationController ()
 
 @end
 
-@implementation PCNavigationController
+@implementation BaseNavigationController
 
 - (void)viewDidLoad {
     [super viewDidLoad];

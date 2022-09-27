@@ -1,5 +1,5 @@
 //
-//  NetCheckWaitor.h
+//  NetCheckUtil.h
 //  PuChi
 //
 //  Created by Veeco on 2017/11/15.
@@ -8,9 +8,9 @@
 
 #import <Foundation/Foundation.h>
 #import <AFNetworking.h>
-@class NetCheckWaitor;
+@class NetCheckUtil;
 
-@protocol NetCheckWaitorDelegate <NSObject>
+@protocol NetCheckUtilDelegate <NSObject>
 
 @optional
 
@@ -20,11 +20,11 @@
  @param status 网络状态
  @param waitor 自身
  */
-- (void)netDidChangeToStatus:(AFNetworkReachabilityStatus)status withWaitor:(nonnull __kindof NetCheckWaitor *)waitor;
+- (void)netDidChangeToStatus:(AFNetworkReachabilityStatus)status withWaitor:(nonnull __kindof NetCheckUtil *)waitor;
 
 @end
 
-@interface NetCheckWaitor : NSObject
+@interface NetCheckUtil : NSObject
 
 /**
  开启网络检测
@@ -43,13 +43,13 @@
  
  @param delegate 代理
  */
-+ (void)addDelegate:(nonnull NSObject<NetCheckWaitorDelegate> *)delegate;
++ (void)addDelegate:(nonnull NSObject<NetCheckUtilDelegate> *)delegate;
 
 /**
  移除代理
  
  @param delegate 代理
  */
-+ (void)removeDelegate:(nonnull NSObject<NetCheckWaitorDelegate> *)delegate;
++ (void)removeDelegate:(nonnull NSObject<NetCheckUtilDelegate> *)delegate;
 
 @end

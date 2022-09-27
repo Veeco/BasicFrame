@@ -1,5 +1,5 @@
 //
-//  ConfigWaitor.h
+//  ConfigManager.h
 //  PuChi
 //
 //  Created by Veeco on 2017/11/15.
@@ -21,10 +21,10 @@ typedef NS_ENUM(NSUInteger, LoginStatus) {
     LoginStatusYes // 已登录
 };
 
-@interface ConfigWaitor : NSObject
+@interface ConfigManager : NSObject
 
 /** 单例 */
-@property (class, nonnull, nonatomic, readonly) __kindof ConfigWaitor *sharedSingleton;
+@property (class, nonnull, nonatomic, readonly) __kindof ConfigManager *sharedSingleton;
 
 /** 运行环境 */
 @property (assign, nonatomic) EnviType enviType;

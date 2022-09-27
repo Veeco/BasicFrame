@@ -1,16 +1,16 @@
 //
-//  HTTPHelper.m
+//  HTTPUtil.m
 //  PuChi
 //
 //  Created by Veeco on 2017/11/15.
 //  Copyright © 2017年 Chance. All rights reserved.
 //
 
-#import "HTTPHelper.h"
+#import "HTTPUtil.h"
 #import "AFNetworking.h"
 #import "NetHintConst.h"
 
-@implementation HTTPHelper
+@implementation HTTPUtil
 
 // 全局AF管理者
 static AFHTTPSessionManager *kManager;
